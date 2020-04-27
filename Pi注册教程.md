@@ -65,8 +65,6 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 04：选Send SMS
 05：发送短信
 
-APP页面功能介绍
-
 ![](https://i.imgur.com/vKqbcMv.png)
 
 ![](https://i.imgur.com/vBWWEEm.png)
