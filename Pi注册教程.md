@@ -68,7 +68,7 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 
 ![](https://i.imgur.com/vBWWEEm.png)
 ```diff
-read **这里推荐英国**
+- read **这里推荐英国**
 ```
 弹出的页面中，可以选择地区，这里可以选择美国（US）或者英国(**这里推荐英国**，the UK,通过时间更快)，然后选择START
 注意：
