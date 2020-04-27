@@ -43,8 +43,7 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 
 ![](https://i.imgur.com/dBN71YM.png)
 
-5.填入邀请码invitation node，任何一个邀请码都可以，比如我的：QwenDing
-用户与用户之间不存在上下级关系，请放心填写。
+5.填入邀请码invitation node，任何一个邀请码都可以，我的邀请码：QwenDing，用户与用户之间不存在上下级关系，请放心填写。
 
 ![](https://i.imgur.com/B1GIO8r.png)
 
@@ -68,8 +67,10 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 ![](https://i.imgur.com/vKqbcMv.png)
 
 ![](https://i.imgur.com/vBWWEEm.png)
-
-弹出的页面中，可以选择地区，这里可以选择美国（US）或者英国(<font color=red>**这里推荐英国**</font>，the UK,通过时间更快)，然后选择START
+```diff
+read **这里推荐英国**
+```
+弹出的页面中，可以选择地区，这里可以选择美国（US）或者英国(**这里推荐英国**，the UK,通过时间更快)，然后选择START
 注意：
 1.移动联通走英国路线
 2.电信走美国路线
