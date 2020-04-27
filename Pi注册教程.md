@@ -38,12 +38,9 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 
 4.填入名、姓、用户名，注册时的姓名要用真实姓名，因为未来上主网需要严格的kyc，如果是虚假姓名，挖的币会被作废。如果是虚假的用户名，将来上主网会有一次修改的机会。
 ![](https://i.imgur.com/dBN71YM.png)
-
 5.填入邀请码invitation node，任何一个邀请码都可以，比如我的：QwenDing
 用户与用户之间不存在上下级关系，请放心填写。
-
 ![](https://i.imgur.com/B1GIO8r.png)
-
 7.填入邀请码提交后，即可完成注册。点击GET STARTED ，按照指引，开始挖矿。详情如下：
 ![](https://i.imgur.com/Jm1OEdR.png)
 ![](https://i.imgur.com/x2bfxaL.png)
