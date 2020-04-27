@@ -59,11 +59,11 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 
 后期系统会把没有通过验证的用户清理掉，当然你辛辛苦苦挖的矿也就没有了，所以短信验证是很重要的一步，一定要完成，除非你就是玩玩，不在乎挖的币。
 步骤如下：
-01：点开菜单选择Profile
-02：选Verify
-03：选Start
-04：选Send SMS
-05：发送短信
+01. 点开菜单选择Profile
+02. 选Verify
+03. 选Start
+04. 选Send SMS
+05. 发送短信
 
 ![](https://i.imgur.com/vKqbcMv.png)
 
