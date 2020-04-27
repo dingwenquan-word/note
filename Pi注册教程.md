@@ -43,7 +43,7 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 
 ![](https://i.imgur.com/dBN71YM.png)
 
-5.填入邀请码invitation node，任何一个邀请码都可以，比如我的：QwenDing. 
+5.填入邀请码invitation node，任何一个邀请码都可以，比如我的：QwenDing
 用户与用户之间不存在上下级关系，请放心填写。
 
 ![](https://i.imgur.com/B1GIO8r.png)
