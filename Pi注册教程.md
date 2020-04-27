@@ -28,16 +28,19 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 
 ## 第二步 注册账号开始挖矿
 1.下载完成安装后，打开APP。建议手机号注册，点击 Continue with phone number
+
 ![](https://i.imgur.com/p6MQreO.png)
 
 2.填入国家和手机号，大陆用户选择 China（+86），点击 Go
+
 ![](https://i.imgur.com/Kr1lD69.png)
 
 3.密码设置需8位以上，数字与字母组合，字母至少有一位大写
+
 ![](https://i.imgur.com/gDpUQ5S.png)
 
-4.填入名、姓、用户名，注册时的姓名要用真实姓名，因为未来上主网需要严格的kyc，如果是虚假姓名，挖的币会被作废。
-如果是虚假的用户名，将来上主网会有一次修改的机会。
+4.填入名、姓、用户名，注册时的姓名要用真实姓名，因为未来上主网需要严格的kyc，如果是虚假姓名，挖的币会被作废。如果是虚假的用户名，将来上主网会有一次修改的机会。
+
 ![](https://i.imgur.com/dBN71YM.png)
 
 5.填入邀请码invitation node，任何一个邀请码都可以，比如我的：QwenDing
@@ -51,6 +54,7 @@ App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appsto
 ![](https://i.imgur.com/x2bfxaL.png)
 ![](https://i.imgur.com/kWB8XlB.png)
 ![](https://i.imgur.com/R5Xt7fM.png)
+
 ## 第三步 手机号认证
 
 后期系统会把没有通过验证的用户清理掉，当然你辛辛苦苦挖的矿也就没有了，所以短信验证是很重要的一步，一定要完成，除非你就是玩玩，不在乎挖的币。
@@ -64,6 +68,7 @@ APP页面功能介绍
 ![](https://i.imgur.com/vKqbcMv.png)
 
 ![](https://i.imgur.com/vBWWEEm.png)
+
 弹出的页面中，可以选择地区，这里可以选择美国（US）或者英国(<font color=red>**这里推荐英国**</font>，the UK,通过时间更快)，然后选择START
 注意：
 1.移动联通走英国路线
@@ -73,7 +78,9 @@ APP页面功能介绍
 或者换成别的国家看看，比如USA（美国）和UK（英国）换一换，试试
 
 请注意：一下截图左边是自动验证部分，右边是手动验证部分。
+
 ![](https://i.imgur.com/1Gj1Q5U.png)
+
 1.点击“OPEN SMS”后，会自动弹到短信页面，如果有接收者和下边内容框4位数字，就直接发送。
 
 2.如果是双卡双待，就用注册账号的号码发送。
@@ -87,6 +94,7 @@ Kingdom：00+447723473314
 USA：+16508220314
 
 USA：00+16508220314
+
 ![](https://i.imgur.com/Xg95ege.png)
 
 ![](https://i.imgur.com/ItiZfTB.png)
@@ -94,7 +102,9 @@ USA：00+16508220314
 此外，手机号验证部分已经很详细了，如果还是验证不成功，请移步参考： http://pi.xahrj.com/faqs/144.html
 
 ## 算力计算说明
+
 ![](https://i.imgur.com/kvtmcIa.png)
+
 如上图所示，每日挖矿的速度由三部分构成。
 
 第一部分，Pioneer是基础速度，所有人都一样，（随着用户的增多，会越来越低，因为pi币总共就那么多）。
