@@ -19,7 +19,8 @@ Pi Network基于恒星共识协议（SCP）和联邦拜占庭协议（FBA）搭�
 官网同步app：https://stephen3.lanzous.com/icuqaxg
 或者扫码下载  
 
-![](https://i.imgur.com/AKoETei.png)
+![](https://i.imgur.com/GeINqKI.png)
+
 
 ### **苹果用户：** 需要使用海外（非大陆地区）的ID才能下载，登陆id后在appstore搜pi network下载即可.
 具体操作如下：
