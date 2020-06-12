@@ -27,13 +27,8 @@ Pi Network基于恒星共识协议（SCP）和联邦拜占庭协议（FBA）搭�
 ### **苹果用户：** 需要使用海外（非大陆地区）的ID才能下载，登陆id后在appstore搜pi network下载即可.
 具体操作如下：
 App Store中先退出自己的AppleID，登入国外AppleID，登陆后在appstore搜 pi network下载即可，下载完即可退出国外ID，登回自己的ID。
-这里提供几个国外ID：
-【aneeo-nine@outlook.com 密码  Aneeo.com-7485804】
-【tobeyou4@163.com    密码 Ts@123456】
-【tobeyou1@163.com    密码 Ts@123456】
-【awt701@yeah.net     密码 JPappleid2020】
-【qzi95p6@icloud.com  密码 Aqwer215100】
-如果失效，可以在某宝花几块钱买一个或者微信搜索”美区账号共享“公众号活得。
+
+没有海外Apple ID的话， 可以在某宝花几块钱买一个或者自己动手注册一个，一劳永逸，附海外Apple Id注册教程：https://support.token.im/hc/zh-cn/articles/360008124173 建议自己注册一个。
 
 ## 第二步 注册账号开始挖矿
 1.下载完成安装后，打开APP。建议手机号注册，点击 Continue with phone number
