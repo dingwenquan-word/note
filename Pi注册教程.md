@@ -24,6 +24,7 @@ Pi Network基于恒星共识协议（SCP）和联邦拜占庭协议（FBA）搭�
 官网同步app：https://stephen3.lanzous.com/id1msba
 
 或者扫码下载 （这个是同步官网app维护的安装包，安全可靠。）
+
 ![](https://i.imgur.com/tIw1SsW.png)
 
 
