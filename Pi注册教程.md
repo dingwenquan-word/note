@@ -19,11 +19,10 @@ Pi Network基于恒星共识协议（SCP）和联邦拜占庭协议（FBA）搭�
 ![](https://i.imgur.com/0C385Tl.png)
 
 ### **安卓用户：** 可通过访问Google Play下载，或者点击黄色按钮直接下载APP(需要能访问google)
-官网同步app：https://stephen3.lanzous.com/ikbkzk5m6ud
+官网同步app：https://stephen3.lanzouj.com/iJQHDzwzqxg
 
 或者扫码下载 （这个是同步官网app维护的安装包，安全可靠。）
-
-![](https://i.imgur.com/z6St33m.png)
+![image](https://user-images.githubusercontent.com/57206185/153574843-64be8e77-b5a8-45f1-b48b-007f8babea9d.png)
 
 
 
