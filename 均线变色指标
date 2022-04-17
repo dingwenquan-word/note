@@ -1,0 +1,175 @@
+//@version=4
+// Created By dwq
+// This Indicator Plots a EMA with Color Based On Upward or Downward Slope
+// plot label deduct price
+// reference EMA Ribbon for BO
+// Created 06/06/2021 
+
+study(title="both MA and ribbon and deduct", shorttitle="BMARD", overlay=true)
+//定义均线流的各个参数参数
+len7= input(7, title="x decuct", minval=1)
+x = input(14, minval=1)
+y = input(20,title="y decuct", minval=1)
+z = input(60, title="z decuct", minval=1)
+len9 = input(90, minval=1)
+m = input(120, title="m decuct",minval=1)
+len15 = input(150, minval=1)
+
+src = input(close, title="Source")
+
+s1 = sma(src, len7)
+s2 = sma(src, x)
+s3 = sma(src, y)
+s4 = sma(src, z)
+s5= sma(src, len9)
+s6 = sma(src, m)
+s7 = sma(src, len15)
+
+e1 = ema(src, len7)
+e2 = ema(src, x)
+e3 = ema(src, y)
+e4 = ema(src, z)
+e5 = ema(src, len9)
+e6 = ema(src, m)
+e7 = ema(src, len15)
+
+//绘制均线流
+
+showSMA = input(true, title="show SMA")
+showEMA = input(false, title="show EMA")
+otherLengthMA = input(false, title="show other length MA")
+
+// color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.white,100):color.black
+
+// plot(showSMA ? s1 : na, color=bar_index % 3 == 0 and not barstate.islast ? color.red : #00000000, title="SMA5", linewidth=1)
+
+// plot(showSMA ? s1 : na, color=color.new(color.red,0), title="SMA5", linewidth=1,style=plot.style_circles)
+// plot(showSMA ? s2 : na, color=color.orange, title="SMA7-deduct", linewidth=1)
+// plot(showSMA and otherLengthMA ? s3 : na, color=color.yellow, title="SMA15", linewidth=1)
+// plot(showSMA ? s4 : na, color=color.green, title="SMA20-deduct", linewidth=1)
+// plot(showSMA ? s5 : na, color=color.aqua, title="SMA30", linewidth=1)
+// plot(showSMA ? s6 : na, color=color.blue, title="SMA60-deduct", linewidth=2)
+// plot(showSMA  and otherLengthMA ? s7 : na, color=color.purple, title="SMA90", linewidth=1)
+// plot(showSMA ? s8 : na, color=color.silver, title="SMA120-deduct", linewidth=1)
+// plot(showSMA  and otherLengthMA ? s9 : na, color=color.olive, title="SMA150", linewidth=1)
+//虚线sma
+plot(showSMA and otherLengthMA ? s1 : na,linewidth=1,color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.yellow,50):#00000000,title="SMA7",style=plot.style_line)
+plot(showSMA ? s2 : na,linewidth=1,color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.orange,10):#00000000,title="SMA14-deduct",style=plot.style_line)
+plot(showSMA ? s3 : na,linewidth=1,color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.green,10):#00000000,title="SMA20-deduct",style=plot.style_line)
+plot(showSMA ? s4 : na,linewidth=2,color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.blue,10):#00000000,title="SMA60-deduct",style=plot.style_line)
+plot(showSMA and otherLengthMA ? s5 : na,linewidth=1,color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.purple,50):#00000000,title="SMA90",style=plot.style_line)
+plot(showSMA ? s6 : na,linewidth=1,color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.silver,10):#00000000,title="SMA120-deduct",style=plot.style_line)
+plot(showSMA and otherLengthMA ? s7 : na,linewidth=1,color = bar_index % 2 == 0 and not barstate.islast ? color.new(color.olive,50):#00000000,title="SMA150",style=plot.style_line)
+
+//实线ema
+plot(showEMA and otherLengthMA ? e1 : na, color=color.new(color.yellow,30), title="EMA7", linewidth=1,style=plot.style_line)
+plot(showEMA ? e2 : na, color=color.new(color.orange,10), title="EMA14-deduct", linewidth=1,style=plot.style_line)
+plot(showEMA ? e3 : na, color=color.new(color.green,10), title="EMA20-deduct", linewidth=1,style=plot.style_line)
+plot(showEMA ? e4 : na, color=color.new(color.blue,10), title="EMA60-deduct", linewidth=2,style=plot.style_line)
+plot(showEMA and otherLengthMA ? e5 : na, color=color.new(color.purple,30), title="EMA90", linewidth=1,style=plot.style_line)
+plot(showEMA ? e6 : na, color=color.new(color.silver,10), title="EMA120-deduct", linewidth=1,style=plot.style_line)
+plot(showEMA and otherLengthMA ? e7 : na, color=color.new(color.olive,30), title="EMA150", linewidth=1,style=plot.style_line)
+
+
+//绘制底扣价MA
+switch_deduct=input(true, "Deduct price")
+ribbon = input(false, title="show EMA ribbon")
+moveLabel=input(defval=0,title="🐖 Move Lable Forward 抵扣价前移",type=input.integer,minval=0,step=5)
+
+newLabel(length,mycolor) => 
+    label.new(bar_index-length, na, tostring(length)+'MA '+tostring(close[length]), 
+     color=mycolor, 
+     textcolor=color.white,
+     style=close[length] > open[length] ? label.style_labeldown : label.style_labelup, 
+     yloc=close[length] > open[length] ? yloc.abovebar : yloc.belowbar
+  )
+
+setDeduct(labelID,length,isShowDeduct) =>
+    if barstate.islast and isShowDeduct
+        label.set_text(labelID, tostring(length)+'MA '+tostring(close[length]))
+        label.set_x(labelID, bar_index-length)
+        label.set_style(labelID,close[length] > open[length] ? label.style_labeldown : label.style_labelup)
+        label.set_yloc(labelID,close[length] > open[length] ? yloc.abovebar : yloc.belowbar)
+
+var l = newLabel(x,color.orange)
+setDeduct(l,x,switch_deduct)
+bgcolor(color=color.new(color.red, transp=90),offset=-x-moveLabel,editable=false,show_last=1)
+
+var l2 = newLabel(y,color.green)
+setDeduct(l2,y,switch_deduct)
+bgcolor(color=color.new(color.green, transp=90),offset=-y-moveLabel,editable=false,show_last=1)
+
+var l3 = newLabel(z,color.blue)
+setDeduct(l3,z,switch_deduct)
+bgcolor(color=color.new(color.blue, transp=90),offset=-z-moveLabel,editable=false,show_last=1)
+
+var l4 = newLabel(m,color.silver)
+setDeduct(l4,m,switch_deduct)
+bgcolor(color=color.new(color.silver, transp=90),offset=-m-moveLabel,editable=false,show_last=1)
+
+//推演周期设置
+TbgSwitchInput = input(defval=false,title="🕵 Deduct Period (ON/OFF) 推演周期显示",type=input.bool)
+moveTime = input(defval=10,title="🐖 Go! Go! Go! 推演周期设置",type=input.integer,minval=3,maxval=39,step=1)
+ConTbg = barstate.islast and TbgSwitchInput==1
+moveTime14 = x-moveTime
+moveTime28 = y-moveTime
+moveTime60 = z-moveTime
+moveTime120 = m-moveTime
+bgcolor(ConTbg?color.new(color.orange, transp=50):na,offset=-moveTime14-moveLabel,editable=false,show_last=1)
+bgcolor(ConTbg?color.new(color.green, transp=50):na,offset=-moveTime28-moveLabel,editable=false,show_last=1)
+bgcolor(ConTbg?color.new(color.blue, transp=50):na,offset=-moveTime60-moveLabel,editable=false,show_last=1)
+bgcolor(ConTbg?color.new(color.silver, transp=50):na,offset=-moveTime120-moveLabel,editable=false,show_last=1)
+if (barstate.islast and ConTbg)
+    line.new(bar_index+moveTime, close, bar_index+moveTime, close * 1.01, extend = extend.both,color=color.red)
+
+// 绘制ema ribbon
+
+ema1 = ema(close, 8)
+ema2 = ema(close, 14)
+ema3 = ema(close, 20)
+ema4 = ema(close, 26)
+ema5 = ema(close, 32)
+ema6 = ema(close, 38)
+ema7 = ema(close, 44)
+ema8 = ema(close, 50)
+
+ema0 = ema(close, 60)
+
+//ema is smoothed to 2 periods, you can change smoothing by adjusting the number in the bracket below
+//example [1] would react quicker and [3] would increase smoothing
+
+plot_color1 = ema1 >= ema1[2]  ? #4985E7 : ema1 < ema1[2] ? #4985E6 : na
+plot_color2 = ema2 >= ema2[2]  ? #4985E7 : ema2 < ema2[2] ? #4985E6 : na
+plot_color3 = ema3 >= ema3[2]  ? #4985E7 : ema3 < ema3[2] ? #4985E6 : na
+plot_color4 = ema4 >= ema4[2]  ? #4985E7 : ema4 < ema4[2] ? #4985E6 : na
+plot_color5 = ema5 >= ema5[2]  ? #4985E7 : ema5 < ema5[2] ? #4985E6 : na
+plot_color6 = ema6 >= ema6[2]  ? #4985E7 : ema6 < ema6[2] ? #4985E6 : na
+plot_color7 = ema7 >= ema7[2]  ? #4985E7 : ema7 < ema7[2] ? #4985E6 : na
+plot_color8 = ema8 >= ema8[2]  ? #4985E7 : ema8 < ema8[2] ? #4985E6 : na
+
+plot_color0 = ema0 >= ema0[2]  ? color.lime: ema0 < ema0[2] ? color.red : na
+
+plot(ribbon ? ema1 : na, title="EMA ribbon8 Plot", style=plot.style_line, linewidth=1, color = plot_color1,editable=false)
+plot(ribbon ? ema2 : na, title="EMA ribbon14 Plot", style=plot.style_line, linewidth=1, color = plot_color2,editable=false)
+plot(ribbon ? ema3 : na, title="EMA ribbon20 Plot", style=plot.style_line, linewidth=1, color = plot_color3,editable=false)
+plot(ribbon ? ema4 : na, title="EMA ribbon26 Plot", style=plot.style_line, linewidth=1, color = plot_color4,editable=false)
+plot(ribbon ? ema5 : na, title="EMA ribbon32 Plot", style=plot.style_line, linewidth=1, color = plot_color5,editable=false)
+plot(ribbon ? ema6 : na, title="EMA ribbon38 Plot", style=plot.style_line, linewidth=1, color = plot_color6,editable=false)
+plot(ribbon ? ema7 : na, title="EMA ribbon44 Plot", style=plot.style_line, linewidth=1, color = plot_color7,editable=false)
+plot(ribbon ? ema8 : na, title="EMA ribbon50 Plot", style=plot.style_line, linewidth=1, color = plot_color8,editable=false)
+
+plot(ribbon ? ema0 : na, title="EMA ribbon60 Plot", style=plot.style_line, linewidth=3, color = plot_color0,editable=false)
+
+//==========Short Trend Change K线变色功能==========
+Switch=input(defval=true,title="change candle color (on/off) k线变色",type=input.bool)
+BaseLeng = input(defval=20,title="K线变色计算周期设置",type=input.integer,minval=10,maxval=60,step=1)
+
+ConGreen  = close>ema(close,BaseLeng) and close>sma(close,BaseLeng) and close>close[BaseLeng] 
+ConBlack = close<ema(close,BaseLeng) and close<sma(close,BaseLeng) and close<close[BaseLeng] 
+ConGray  = not(ConGreen and ConBlack)
+ChangeColorGray = (ConGray and Switch==1) ? color.silver:na
+ChangeColorAqua = (ConGreen and Switch==1) ? color.green:na
+ChangeColorBlack = (ConBlack and Switch==1) ? color.yellow:na
+barcolor(ChangeColorAqua,editable=true)
+barcolor(ChangeColorBlack,editable=true)
+barcolor(ChangeColorGray,editable=true)
