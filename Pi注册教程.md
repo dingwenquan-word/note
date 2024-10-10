@@ -21,7 +21,9 @@ Pi Network基于恒星共识协议（SCP）和联邦拜占庭协议（FBA）搭�
 ### **安卓用户：** 可通过访问Google Play下载，或者点击黄色按钮直接下载APP(需要能访问google)
 官网同步app：https://stephen3.lanzouw.com/ivlEB2c7a5zc
 
+
 或者扫码下载 （这个是同步官网app维护的安装包，安全可靠。）
+
 ![image](https://github.com/user-attachments/assets/3b55a2b1-dd6c-43f7-b368-5efe83bbaee9)
 
 ### **苹果用户：** 需要使用海外（非大陆地区）的ID才能下载，登陆id后在appstore搜pi network下载即可。
@@ -99,6 +101,19 @@ USA：00+16508220314
 ![](https://i.imgur.com/ItiZfTB.png)
 
 此外，手机号验证部分已经很详细了，如果还是验证不成功，请移步参考： http://pi.xahrj.com/faqs/144.html
+
+## 创建钱包，非常重要
+一定要牢记助记词，存到可靠的笔记本上，非常重要！！！丢失将不可找回
+创建钱包是通过pi_browser这个app创建的，按照步骤一步步来
+这是安卓版本的pi browser下载链接，是官网同步更新的，苹果手机在海外APPStore搜索下载即可
+下载链接：https://stephen3.lanzouw.com/iGdmg2c79ymh
+也可以扫描下载：
+![image](https://github.com/user-attachments/assets/59d78d6a-bc35-425f-8697-2f3a0f4b75c0)
+
+## KYC-身份认证，非常重要
+为了让pi网络中的人都是真实的，需要进行身份认证，过滤掉刷子和机器人，一人一号，公平公正，防止代币过度集中
+可以在pi network中点击mainnet主网，总共8大步骤，按照步骤做就行
+记住哦，没有经过身份认证的币，不会转移到主网
 
 ## 算力计算说明
 
