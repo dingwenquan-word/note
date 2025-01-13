@@ -21,6 +21,7 @@ Pi Network基于恒星共识协议（SCP）和联邦拜占庭协议（FBA）搭�
 ### **安卓用户：** 可通过访问Google Play下载，或者点击黄色按钮直接下载APP(需要能访问google)
 官网同步app：https://stephen3.lanzouw.com/iMpj32ks31yj
 或者扫码下载 （这个是同步官网app维护的安装包，安全可靠。）
+
 ![image](https://github.com/user-attachments/assets/4d95f5e1-8988-48f4-aaed-27238b9f944e)
 ### **苹果用户：** 需要使用海外（非大陆地区）的ID才能下载，登陆id后在appstore搜pi network下载即可。
 具体操作如下：
